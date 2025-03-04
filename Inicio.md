@@ -6,6 +6,9 @@
 ## Crear proyecto
 npm create vite
 
+## Instalar paquetes
+npm install
+
 ## Ejecutar proyecto
 npm run dev
 
