@@ -1,3 +1,8 @@
+# NOTAS DEL CURSO DE REACT
+
+Este proyecto reune las nociones básicas para iniciar un proyecto de React + Typescript + Vite.
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
