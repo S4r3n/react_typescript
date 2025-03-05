@@ -11,7 +11,7 @@ my-react-app/
 │   ├── manifest.json
 │   └── robots.txt
 ├── src/
-│   ├── componentes/
+│   ├── components/
 │   │   ├── Header.tsx
 │   │   ├── Footer.tsx
 │   │   └── MainContent.tsx
