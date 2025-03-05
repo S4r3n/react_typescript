@@ -2,58 +2,65 @@
 
 Este proyecto reune las nociones básicas para iniciar un proyecto de React + Typescript + Vite.
 
+## Instalar node
+Diferentes versiones de NodeJs instaladas mediante Node Version Manager (NVM) o Fast Node Manager (FNM) 
+* https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/ 
+* https://github.com/Schniz/fnm
 
-# React + TypeScript + Vite
+Las versiones de NodeJs que deben estar instaladas son:
+* 22.14.0
+* 20.18.3
+* 18.20.7
+* 16.20.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## IDE Recomendado Visual Studio Code
+https://code.visualstudio.com/
+Se recomiendan las siguientes extensiones:
+* Tailwind CSS IntelliSense: https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+* ES7+ React/Redux/React-Native snippets: https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
 
-Currently, two official plugins are available:
+## Crear proyecto
+npm create vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalar paquetes
+npm install
 
-## Expanding the ESLint configuration
+## Ejecutar proyecto
+npm run dev
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Estructura del proyecto
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+my-react-app/
+├── node_modules/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── componentes/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── MainContent.tsx
+│   ├── App.css
+│   ├── App.test.tsx
+│   ├── App.tsx
+│   ├── index.css
+│   ├── index.tsx
+│   ├── logo.svg
+│   ├── react-app-env.d.ts
+│   ├── reportWebVitals.ts
+│   └── setupTests.ts
+├── .gitignore
+├── .swcrc
+├── package.json
+├── tsconfig.json
+├── README.md
+└── yarn.lock
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+La base está escrita en App.txs.
+Cada componente debe escribirse en su propio fichero txs dentro de una carpeta llamada "components" dentro de la carpeta "src".
